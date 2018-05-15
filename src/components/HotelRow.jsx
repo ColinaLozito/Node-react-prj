@@ -9,7 +9,7 @@ export default class HotelRow extends React.Component {
 		var indents = [];
 		for (var i = 0; i < stars; i++) {
 		  indents.push(
-		  	<img src="/icons/star.png" className='star' />
+		  	<img key={i} src="/icons/star.png" className='star' />
 		 );
 		}
 		

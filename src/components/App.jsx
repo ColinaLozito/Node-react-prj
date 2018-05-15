@@ -21,6 +21,7 @@ export default class App extends React.Component {
 	}
 
 	fetchHotels(){
+
 		let $this = this
 		axios.get(this.state.url).then(response => {
 			$this.setState({
@@ -80,7 +81,6 @@ export default class App extends React.Component {
 	}
 
 	handleFilterSubmit(){
-		//e.preventDefault();
 		var self = this; //----the script I have to add
 		let data = self.starfilter
 		console.log(data)
@@ -107,7 +107,7 @@ export default class App extends React.Component {
 		var stars = [];
 		for (var i = 5; i > 0; i--) {
 		  stars.push(
-		  	<div class="checkbox">
+		  	<div className="checkbox" key={i}>
 		  		<label><input type="checkbox" value={i} name={i+'stars'} onChange={this.handleCheckFilter.bind(this)} />{this.filterStars(i)}</label>
 		  	</div>
 		 );
@@ -125,7 +125,7 @@ export default class App extends React.Component {
 		var indents = [];
 		for (var i = 0; i < stars; i++) {
 		  indents.push(
-		  	<img src="/icons/star.png" className='star' />
+		  	<img src="/icons/star.png" className='star' key={i}/>
 		 );
 		}
 		return (
@@ -166,7 +166,7 @@ export default class App extends React.Component {
 										</div>
 										<div className="filters-options">
 											<form onSubmit={this.handleFilterSubmit.bind(this)}>
-												<div class="checkbox all-stars">
+												<div className="checkbox all-stars">
 													<button className="btn btn-default" onClick={this.fetchHotels.bind(this)} >Todas las Estrellas</button>
 												</div>
 												{this.starsCheck()}

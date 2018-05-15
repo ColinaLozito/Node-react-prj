@@ -2508,6 +2508,7 @@ var App = function (_React$Component) {
 	}, {
 		key: 'fetchHotels',
 		value: function fetchHotels() {
+
 			var $this = this;
 			axios.get(this.state.url).then(function (response) {
 				$this.setState({
@@ -2573,7 +2574,6 @@ var App = function (_React$Component) {
 		value: function handleFilterSubmit() {
 			var _this3 = this;
 
-			//e.preventDefault();
 			var self = this; //----the script I have to add
 			var data = self.starfilter;
 			console.log(data);
@@ -2599,7 +2599,7 @@ var App = function (_React$Component) {
 			for (var i = 5; i > 0; i--) {
 				stars.push(_react2.default.createElement(
 					'div',
-					{ 'class': 'checkbox' },
+					{ className: 'checkbox', key: i },
 					_react2.default.createElement(
 						'label',
 						null,
@@ -2620,7 +2620,7 @@ var App = function (_React$Component) {
 
 			var indents = [];
 			for (var i = 0; i < stars; i++) {
-				indents.push(_react2.default.createElement('img', { src: '/icons/star.png', className: 'star' }));
+				indents.push(_react2.default.createElement('img', { src: '/icons/star.png', className: 'star', key: i }));
 			}
 			return _react2.default.createElement(
 				'div',
@@ -2718,7 +2718,7 @@ var App = function (_React$Component) {
 												{ onSubmit: this.handleFilterSubmit.bind(this) },
 												_react2.default.createElement(
 													'div',
-													{ 'class': 'checkbox all-stars' },
+													{ className: 'checkbox all-stars' },
 													_react2.default.createElement(
 														'button',
 														{ className: 'btn btn-default', onClick: this.fetchHotels.bind(this) },
@@ -21905,7 +21905,7 @@ var HotelRow = function (_React$Component) {
 
 			var indents = [];
 			for (var i = 0; i < stars; i++) {
-				indents.push(_react2.default.createElement('img', { src: '/icons/star.png', className: 'star' }));
+				indents.push(_react2.default.createElement('img', { key: i, src: '/icons/star.png', className: 'star' }));
 			}
 
 			return _react2.default.createElement(
