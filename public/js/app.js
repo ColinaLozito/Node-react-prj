@@ -22006,12 +22006,16 @@ var HotelRow = function (_React$Component) {
 									'div',
 									{ className: 'col-sm-12 hotel-button' },
 									_react2.default.createElement(
-										'button',
-										{ className: 'btn btn-primary btn-block' },
+										'a',
+										{ href: '/api/hotels/' + this.props.hotel.id },
 										_react2.default.createElement(
-											'p',
-											null,
-											'Ver Hotel'
+											'button',
+											{ className: 'btn btn-primary btn-block' },
+											_react2.default.createElement(
+												'p',
+												null,
+												'Ver Hotel'
+											)
 										)
 									)
 								)

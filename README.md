@@ -1,5 +1,17 @@
 # Node-react-prj
-This is my fisrt project maded with MongoDb, Express, React.js and Node.js, axios to make RESTfull requests and Webpack to compilate all code in a simple JavaScript file
+
+An Hotels finder project, where yo can load and check a list of hotels that are availables.
+
+This is my fisrt project maded with the followings technologies:
+
+- MongoDb
+- Express.js
+- React.js
+- Node.js 
+- Axios libraries 
+- Webpack
+
+A JavaScript Stack Project
 
 ## Getting Started
 

@@ -68,7 +68,7 @@ export default class HotelRow extends React.Component {
 									<h3>ARS <strong>{this.props.hotel.price}</strong></h3>						
 								</div>
 								<div className="col-sm-12 hotel-button">
-									<button className="btn btn-primary btn-block"><p>Ver Hotel</p></button>
+									<a href={'/api/hotels/'+this.props.hotel.id}><button className="btn btn-primary btn-block"><p>Ver Hotel</p></button></a>
 								</div>
 							</div>
 						</div>

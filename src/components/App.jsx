@@ -140,53 +140,42 @@ export default class App extends React.Component {
 			<div className="row">
 				<div className="col-xs-12 col-sm-12 col-lg-3">
 					<div className="filters col-sm-12">
-					<div>
-						<div className="form-group filters-title col-sm-12" >
-							<a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-								<h4><strong>Filtros</strong></h4>
-								<img className="triangle-down-icon" src="/icons/filters/triangle-down.png"></img>
-							</a>
-							
-						</div>
-
-						<div className="col-sm-12 collapse" id="collapseExample">
-						<div className="row">
-							<form onSubmit={this.handleSubmit.bind(this)}>
-
-								<div className="form-group filters-input">
-								    <label className="col-sm-12 search-title">
-								    	<strong><span className="search-icon"></span>Nombre del hotel</strong>
-								    </label>
-								    <div>
-								    	<input type="search" className="form-control" name="search_Hotel" id="search_Hotel" onChange={this.handleHotelName.bind(this)} aria-describedby="search" placeholder="Ingrese el nombre del Hotel" />
-								  		<button type="submit" className="btn btn-primary" >Buscar</button>
-								    </div>
-								</div>
-							</form>
-
-							<div className="form-control filters-stars">
-
-								<div className="col-md-12 star-title">
-									<strong><span className="star-icon"></span>Estrellas</strong>
-								</div>
-								
-								<div className="filters-options">
-								
-								<form onSubmit={this.handleFilterSubmit.bind(this)}>
-
-									<div class="checkbox all-stars">
-										<button className="btn btn-default" onClick={this.fetchHotels.bind(this)} >Todas las Estrellas</button>
+						<div>
+							<div className="form-group filters-title col-sm-12" >
+								<a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+									<h4><strong>Filtros</strong></h4>
+									<img className="triangle-down-icon" src="/icons/filters/triangle-down.png"></img>
+								</a>
+							</div>
+							<div className="col-sm-12 collapse" id="collapseExample">
+								<div className="row">
+									<form onSubmit={this.handleSubmit.bind(this)}>
+										<div className="form-group filters-input">
+										    <label className="col-sm-12 search-title">
+										    	<strong><span className="search-icon"></span>Nombre del hotel</strong>
+										    </label>
+										    <div>
+										    	<input type="search" className="form-control" name="search_Hotel" id="search_Hotel" onChange={this.handleHotelName.bind(this)} aria-describedby="search" placeholder="Ingrese el nombre del Hotel" />
+										  		<button type="submit" className="btn btn-primary" >Buscar</button>
+										    </div>
+										</div>
+									</form>
+									<div className="form-control filters-stars">
+										<div className="col-md-12 star-title">
+											<strong><span className="star-icon"></span>Estrellas</strong>
+										</div>
+										<div className="filters-options">
+											<form onSubmit={this.handleFilterSubmit.bind(this)}>
+												<div class="checkbox all-stars">
+													<button className="btn btn-default" onClick={this.fetchHotels.bind(this)} >Todas las Estrellas</button>
+												</div>
+												{this.starsCheck()}
+											</form>
+										</div>
 									</div>
-									{this.starsCheck()}
-			
-								</form>
-
-
 								</div>
 							</div>
 						</div>
-						</div>
-					</div>
 					</div>
 				</div>
 
