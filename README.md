@@ -7,7 +7,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 What things you need to install the software and how to install them:
-- Have installed Node.js
+- Have Node.js installed
 
 ### Installing
 1- In the server tool project folder copy the git repository
@@ -56,7 +56,7 @@ app.put('/api/hotels/:id'... => http://localhost:8000/api/hotels/...
 ```
 app.post('/api/hotels'... => http://localhost:8000/api/hotels/...
 ```
-- To filster by Stars reputation
+- To filster by reputation Stars
 ```
 app.post('/api/starsfilter'... => http://localhost:8000/api/starsfilter
 ```
