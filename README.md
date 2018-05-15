@@ -65,6 +65,7 @@ app.post('/api/starsfilter'... => http://localhost:8000/api/starsfilter
 
 
 EXTRAS:
+
 - If you want to backup the DB in a JSON file you can access to
 ```
 app.post('/api/backupdb'... => http://localhost:8000/api/backupdb
