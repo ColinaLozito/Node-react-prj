@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import update from 'react-addons-update';
-import HotelRow from '../../src/components/HotelRow.jsx'
 
-export default class App extends React.Component {
+import HotelRow from './HotelRow'
+
+class App extends React.Component {
 
 	constructor(){
 		super();
@@ -140,7 +140,7 @@ export default class App extends React.Component {
 			<div className="row">
 				<div className="col-xs-12 col-sm-12 col-lg-3">
 					<div className="filters col-sm-12">
-						<div>
+						
 							<div className="form-group filters-title col-sm-12" >
 								<a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
 									<h4><strong>Filtros</strong></h4>
@@ -175,7 +175,7 @@ export default class App extends React.Component {
 									</div>
 								</div>
 							</div>
-						</div>
+						
 					</div>
 				</div>
 
@@ -199,6 +199,4 @@ export default class App extends React.Component {
 }
 
 
-if (document.getElementById('app')) {
-	ReactDOM.render(<App/>, document.getElementById('app') )
-}
+export default App;

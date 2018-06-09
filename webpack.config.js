@@ -1,5 +1,5 @@
 module.exports = {
-  	entry: './src/index.jsx',
+  	entry: './src/index.js',
 	output: {
 		path:__dirname+'/public/js',
 		filename: "app.js"
@@ -7,7 +7,7 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.jsx$/,
+				test: /\.js$/,
 				loader: "babel-loader",
 				exclude: /node_modules/
 			},

@@ -83,9 +83,14 @@ html, body{
 
 		width: 100%;
 
-		form {
+		.search-by-name{
 			width:100%;
+			margin-bottom: 1em;
+			form {
+				width:100%;
+			}
 		}
+
 
 		.filters-title {
 			background-color: white;

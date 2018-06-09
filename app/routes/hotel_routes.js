@@ -50,7 +50,7 @@ module.exports = function(app, db) {
 
 	app.post('/api/starsfilter', (req, res) => {
 
-		let data =req.body.data;
+		let data = req.body.str;
 		
 		coll.find({"stars": { $in: data } }).toArray(function (err,result) {
 			if(err){

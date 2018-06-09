@@ -22,8 +22,13 @@
 		width: 110%;
 		max-width: 450px;
 
-		form {
-			width:110%;
+		.search-by-name {
+			width:100%;
+			
+			form {
+				width:100%;
+			}
+			
 		}
 
 		.filters-title {
@@ -45,7 +50,7 @@
 		.filters-input {
 			background-color: white;
 			padding-top: 1em;
-			padding-bottom: 0.5em;
+			padding-bottom: 1.5em;
 			padding-right: 1em;
 			padding-left: 1em;
 
@@ -68,8 +73,15 @@
 				padding-top: 1em;
 			}
 
+			.all-stars {
+				padding-bottom: 1em;
+			}
+
 			.filters-options {
 				padding-top: 25px;
+     			padding-left: 1em;
+  			    padding-bottom: 1em;
+
 				
 				strong {
 					padding-left: 10px;
