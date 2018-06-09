@@ -95,6 +95,14 @@ This project was maded also with responsive design
 In this proect you can watch and load a Hotels in a list, also yo can find an Hotel by name or filter by reputation stars
 
 
+## Screens
+
+![desktop](https://user-images.githubusercontent.com/18740032/40064221-b3b1bf24-5824-11e8-949d-308ccfd2ece9.JPG)
+
+
+![mobile](https://user-images.githubusercontent.com/18740032/40064284-d085ae9e-5824-11e8-9ed0-826f7084427e.jpg)
+
+
 ## License
 
 This project is licensed under the MIT License
