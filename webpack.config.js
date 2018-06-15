@@ -1,31 +1,47 @@
 module.exports = {
-  	entry: './src/index.js',
+  	entry: '/src/styles/scss/app.scss',
 	output: {
 		path:__dirname+'/public/js',
 		filename: "app.js"
 	},
-	module: {
-		rules: [
-			{
-				test: /\.js$/,
-				loader: "babel-loader",
-				exclude: /node_modules/
+	module:{
+     rules:[
+             {
+				  test: /\.scss$/,
+				  use: [
+				    {
+				      loader: require.resolve('style-loader'),
+				    },
+				    {
+				      loader: require.resolve('css-loader'),
+				      options: {
+				        importLoaders: 1,
+				      }
+				    },
+				    {
+				      loader: require.resolve('sass-loader'),
+				    },
+				    {
+				      loader: require.resolve('postcss-loader'),
+				      options: {
+				        ident: 'postcss',
+				        plugins: () => [
+				          require('postcss-flexbugs-fixes'),
+				          autoprefixer({
+				            browsers: [
+				              '>1%',
+				              'last 4 versions',
+				              'Firefox ESR',
+				              'not ie < 9',  
+				            ],
+				            flexbox: 'no-2009',
+				          }),
+				        ],
+				      },
+				    }, 
+				  ]
 			},
-			{
-				test: /\.scss$/,
-				use: [
-					{
-						loader: "style-loader" // creates style nodes from JS strings
-					},
-					{
-						loader: "css-loader" // translates CSS into CommonJS
-					},
-					{
-						loader: "sass-loader" // compiles Sass to CSS
-					}
-				]
-			},
-		]
-	},
+      ]
+   },
 	mode: 'none'
 };

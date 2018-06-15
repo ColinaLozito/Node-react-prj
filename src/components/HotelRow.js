@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 
-export default class HotelRow extends React.Component {
+export default class HotelRow extends Component {
 
 	handleStars(stars){
 		var indents = [];
 		for (var i = 0; i < stars; i++) {
 		  indents.push(
-		  	<img key={i} src="/icons/star.png" className='star' />
+		  	<img key={i} src="/icons/star.png" alt="str" className='star' />
 		 );
 		}
 		return (
@@ -18,7 +17,7 @@ export default class HotelRow extends React.Component {
 	hotelAmenities(amenities){
 		return amenities.map((amn, pos)=>{
 			return (
-				<img key={pos} className="amenities-icon" src={'icons/amenities/'+amn+".svg"} />
+				<img key={pos} className="amenities-icon" alt={amn} src={'icons/amenities/'+amn+".svg"} />
 			)
 		})
 	}
@@ -33,7 +32,7 @@ export default class HotelRow extends React.Component {
 							<div className="col-sm-12 col-lg-4">
 								<div className="row">
 									<div className="col-md-12 hotel-image-frame">
-										<img className="hotel-img" src={'./images/hotels/'+hotel.image}/>
+										<img className="hotel-img" alt={hotel.image} src={'./images/hotels/'+hotel.image}/>
 									</div>
 								</div>
 							</div>
@@ -65,7 +64,7 @@ export default class HotelRow extends React.Component {
 										<h3>ARS <strong>{hotel.price}</strong></h3>						
 									</div>
 									<div className="col-sm-12 hotel-button">
-										<a href={'/api/hotels/'+hotel.id}><button className="btn btn-primary btn-block"><p>Ver Hotel</p></button></a>
+										<a href={'/single/'+hotel.id}><button className="btn btn-primary btn-block"><p>Ver Hotel</p></button></a>
 									</div>
 								</div>
 							</div>

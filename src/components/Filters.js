@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 
 import SearchByNameFilter from './SearchByNameFilter';
 import FilterByStars from './FilterByStars';
 
-export default class Filters extends React.Component {
+export default class Filters extends Component {
 		
 	render(){
 		return(
@@ -12,7 +11,7 @@ export default class Filters extends React.Component {
 				<div className="form-group filters-title col-sm-12" >
 					<a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
 						<h4><strong>Filtros</strong></h4>
-						<img className="triangle-down-icon" src="/icons/filters/triangle-down.png" />
+						<img className="triangle-down-icon" alt="triangle" src="/icons/filters/triangle-down.png" />
 					</a>
 				</div>
 

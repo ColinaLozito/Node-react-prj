@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 
-export default class SearchByNameFilter extends React.Component {
+export default class SearchByNameFilter extends Component {
 
 	constructor(props){
 		super(props)

@@ -156,7 +156,7 @@ module.exports = function(app, db) {
 			db.close();
 		});
 
-		fs.readFile('./app/routes/data.json', 'utf8', function (err, data) {
+		fs.readFile('../../config/data.json', 'utf8', function (err, data) {
 		 	if (err) throw err;
 		 	var obj = JSON.parse(data);
 		 	obj.map(function(item, pos){

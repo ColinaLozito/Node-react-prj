@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 
 import HotelRow from './HotelRow';
@@ -7,7 +6,7 @@ import Filters from './Filters';
 
 import { getHotels, filterByName, filterByStars} from '../actions/actionsIndex'
 
-class Main extends React.Component {
+class Main extends Component {
 
 	componentDidMount(){
 		this.props.getHotels();
@@ -15,7 +14,7 @@ class Main extends React.Component {
 
 	render(){
 		return (
-			<div className="container">
+			<div className="contain col-md-12">
 				<div className="row">
 					<div className="col-xs-12 col-sm-12 col-lg-3">
 							<div className="filters col-sm-12">
@@ -25,10 +24,10 @@ class Main extends React.Component {
 
 					<div className="col-xs-12 col-sm-12 col-lg-9">
 			            <div className="hotels">
-			            	<div className="">
-			            		<div className="">
+			            	<div className="hotels-container">
+			            		
 			            			<HotelRow {...this.props} />
-			            		</div>
+	
 			            	</div>                
 			            </div>
 					</div>

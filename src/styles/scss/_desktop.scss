@@ -6,12 +6,18 @@
 	    margin-top: -1.8em;
 	}
 
+	.main-container {
+		.contain{
+			width:100%;
+		}
+	}
+
 
 	.navbar{
-		background-color:$dark_blue;
+		background-color: black;
 		height: 5em;
 
-		.svg-logo {
+		.logo {
 			height: 100%;
 			width: 10em;
 		}

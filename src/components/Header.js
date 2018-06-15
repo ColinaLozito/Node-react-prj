@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 
-export default class Header extends React.Component {
+export default class Header extends Component{
 
 	render () {
 		return (
@@ -9,8 +8,8 @@ export default class Header extends React.Component {
 				<nav className="navbar navbar-default">
 					<div className="container-fluid">
 						<div className="navbar-header">
-					    	<a className="navbar-brand" href="#">
-								<h1>Logo</h1>
+					    	<a className="navbar-brand" href={__dirname}>
+								<img className="logo" alt="logo" src={__dirname+'logo-2.png'}/>
 							</a>
 					    </div>
 					</div>

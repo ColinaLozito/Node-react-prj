@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 
-export default class FilterByStars extends React.Component {
+export default class FilterByStars extends Component {
 
 	constructor(props){
 		super(props);
@@ -18,7 +17,7 @@ export default class FilterByStars extends React.Component {
 
 		let array = this.starfilter;
 		let val = e.target.value
-		let value = parseInt(val)
+		let value = parseInt(val, 10)
 		let position = array.indexOf(value)
 		
 		if (array.includes(value)) {
@@ -29,7 +28,7 @@ export default class FilterByStars extends React.Component {
 			}
 			this.handleFilterSubmit()
 		}else{
-			array.push(parseInt(value))
+			array.push(parseInt(value, 10))
 
 			if (array.length === 0) {
 				this.fetchHotels()
@@ -39,26 +38,9 @@ export default class FilterByStars extends React.Component {
 	}
 
 	handleFilterSubmit(){
-		var self = this; //----the script I have to add
+		var self = this;
 		let data = Object.values(self.starfilter)
 		this.props.filterByStars(data)
-		/*axios.post('api/starsfilter', {data}).then(response => {
-			console.log(response.data)
-			if (response.data.lengh >= 1) {
-				this.setState({
-					data: [response.data]
-				})
-				
-			}else {
-				this.setState({
-					data: response.data
-				})
-			}
-		}).catch(error => {
-			console.log(error)
-		})*/
-
-
 	}
 
 	starsCheck(){
@@ -83,7 +65,7 @@ export default class FilterByStars extends React.Component {
 		var indents = [];
 		for (var i = 0; i < stars; i++) {
 		  indents.push(
-		  	<img src="/icons/star.png" className='star' key={i}/>
+		  	<img src="/icons/star.png" alt={i} className='star' key={i}/>
 		 );
 		}
 		return (
